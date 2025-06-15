@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dîmes & Offrandes</title>
+  <link rel="stylesheet" href="styledime.css">
+</head>
+<body>
+  <section class="paiement-section">
+    <div class="content-wrapper">
+      <h1>Dîmes & Offrandes</h1>
+      <p>Faites un don en toute sécurité.</p>
+
+      <button class="paiement-btn" onclick="afficherRIB()">
+        <img src="visa.jpg" alt="Carte Bancaire">
+        Carte / Virement Bancaire
+      </button>
+
+      <div id="rib-container" class="rib-caché">
+        <strong>RIB :</strong>
+        <span id="rib">FR76 1659 8000 0140 0007 2188 825</span>
+        <button onclick="copierRIB()" class="copier-btn">📋 Copier</button>
+      </div>
+
+      <form action="https://www.paypal.com/donate" method="post" target="_blank">
+        <input type="hidden" name="business" value="Revolutionenchrist33@gmail.com">
+        <input type="hidden" name="currency_code" value="EUR">
+        <input type="hidden" name="amount" id="paypalAmount">
+        <button type="button" class="paiement-btn" onclick="payerAvecPaypal()">
+          <img src="paypal.jpg" alt="Paypal">
+          Payer avec Paypal
+        </button>
+      </form>
+
+      <button class="paiement-btn" onclick="payerAvecOrangeMoney()">
+        <img src="WhatsApp Image 2025-03-14 à 19.29.41_6ca0c821.jpg" alt="Orange Money">
+        Payer avec Orange Money
+      </button>
+    </div>
+  </section>
+
+  <script src="scriptdime.js"></script>
+</body>
+</html>
